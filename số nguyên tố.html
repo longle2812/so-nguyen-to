@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+
+</body>
+<script>
+    let numbers = +prompt("nhập số nguyên tố cần kiểm tra");
+    let count = 0;
+    let N = 2;
+    let text = null;
+    document.write (numbers + " số nguyên tố là: ");
+    while (count < numbers){
+        if (check (N)) {
+            count++;
+            text += N + " ";
+            document.write(N + " ");
+        }
+        N++;
+    }
+
+    function check (N) {
+        let count1 = 0;
+        for (let i = 2; i < N; i++) {
+            if ((N % i === 0) && (N !== 2)) {
+                count1 ++;
+            }
+        }
+        if (count1 === 0) {
+            return true;
+        }
+        else return false;
+
+    }
+
+</script>
+</html>
